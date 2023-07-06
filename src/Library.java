@@ -28,17 +28,7 @@ public class Library extends Book {
         this.autors = autors;
         this.books = books;
 
-//        List<String> filterWithGenre = new ArrayList<>();
-//        for(
-//                String newGenre :genre)
-//
-//        {
-//            if(newGenre.startsWith("")){
-//                filterWithGenre.add(newGenre);
-//            }
-//        }
-//        System.out.println(genre);
-//
+
     }
 
 
