@@ -34,10 +34,7 @@ public class Book {
         this.quantity = quantity;
 
 
-
     }
-
-
 
 
     public void translation(String language) {

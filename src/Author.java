@@ -2,7 +2,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Author{
+public class Author {
     private Biography biography;
     // modificator de acces +
     private String literaryCurrent;

@@ -31,6 +31,26 @@ public class Library extends Book {
 
     }
 
+    public void filterWithGenre(String genre) {
+
+    }
+
+    public void getBooksUnder (double price){
+
+    }
+    public void getBooksByAuthor(String authorName) {
+
+    }
+    public void getBooksByName(String bookName) {
+
+    }
+    public void getBooksByLanguage(String language) {
+
+    }
+    public void getAuthorsByLiteraryCurrent(String current) {
+
+    }
+
 
     public ArrayList<Author> getAutors() {
         return autors;
