@@ -7,19 +7,19 @@ public class Book {
     private String title;
     private int yearPublished;
     private int numberOfPages;
-    private ArrayList<String> genre;
-    private ArrayList<String> format;
+    private String genre;
+    private String format;
     private String language;
     private int ageRecommandation;
-    private ArrayList<String> editorialAgency;
+    private String editorialAgency;
     private double price;
     private boolean isInStock;
     private int quantity;
 
 
     public Book(String title, int yearPublished, int numberOfPages,
-                ArrayList<String> genre, ArrayList<String> format,
-                String language, int ageRecommandation, ArrayList<String> editorialAgency,
+                String genre, String format,
+                String language, int ageRecommandation, String editorialAgency,
                 double price, boolean isInStock, int quantity) {
         this.title = title;
         this.yearPublished = yearPublished;
@@ -90,19 +90,19 @@ public class Book {
         this.numberOfPages = numberOfPages;
     }
 
-    public ArrayList<String> getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(ArrayList<String> genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
 
-    public ArrayList<String> getFormat() {
+    public String getFormat() {
         return format;
     }
 
-    public void setFormat(ArrayList<String> format) {
+    public void setFormat(String format) {
         this.format = format;
     }
 
@@ -122,11 +122,11 @@ public class Book {
         this.ageRecommandation = ageRecommandation;
     }
 
-    public ArrayList<String> getEditorialAgency() {
+    public String getEditorialAgency() {
         return editorialAgency;
     }
 
-    public void setEditorialAgency(ArrayList<String> editorialAgency) {
+    public void setEditorialAgency(String editorialAgency) {
         this.editorialAgency = editorialAgency;
     }
 

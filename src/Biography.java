@@ -4,25 +4,26 @@ public class Biography {
     private String name;
     private String birthDate;
     private String placeOfBirth;
-    private ArrayList<String> education;
+    private String education;
     private boolean isALive;
 
 
-    public Biography(String name, String birthDate, String placeOfBirth, ArrayList<String> education, boolean isALive) {
+    public Biography(String name, String birthDate, String placeOfBirth,String education, boolean isALive) {
         this.name = name;
         this.birthDate = birthDate;
         this.placeOfBirth = placeOfBirth;
         this.education = education;
         this.isALive = isALive;
+
     }
 
-    public Biography(String name, String birthDate, boolean isAlive) {
-        this.name = name;
-        this.birthDate = birthDate;
-        this.isALive = isAlive;
-        this.placeOfBirth = "Unknown";
-        this.education = null;
-    }
+//    public Biography(String name, String birthDate, boolean isAlive) {
+//        this.name = name;
+//        this.birthDate = birthDate;
+//        this.isALive = isAlive;
+//        this.placeOfBirth = "Unknown";
+//        this.education = null;
+//    }
 
 
     // SET parameters////////////////////////////////////////////
@@ -38,7 +39,7 @@ public class Biography {
         this.placeOfBirth = placeOfBirth;
     }
 
-    public void setEducation(ArrayList<String> education) {
+    public void setEducation(String education) {
         this.education = education;
     }
 
@@ -64,7 +65,7 @@ public class Biography {
         return isALive;
     }
 
-    public ArrayList<String> getEducation() {
+    public String getEducation() {
         return education;
     }
 

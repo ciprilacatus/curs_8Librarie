@@ -1,10 +1,7 @@
-import java.awt.*;
 import java.util.*;
-import java.util.List;
-import java.util.stream.BaseStream;
 
 
-public class Library{
+public class Library {
     private ArrayList<Author> autors;
     private ArrayList<Book> books;
 
@@ -19,6 +16,16 @@ public class Library{
     }
 
     public void filterWithGenre(String genre) {
+
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("please input genre");
+//        String findGenre = sc.nextLine();
+//        if(books.contains(findGenre)) {
+//            System.out.println(this.autors);
+//        } else {
+//            System.out.println("Sory ! no books with "  + " here are our genre "+ genre);
+//        }
 
     }
 
