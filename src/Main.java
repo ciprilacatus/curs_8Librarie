@@ -9,7 +9,7 @@ public class Main {
 ////////////////////////////////books////////////////////////////////////
         ArrayList<Book> books = new ArrayList<>();
         Book book1 = new Book("Acolo unde canta racii", 2020, 301,
-                "triler", "paper", "romanian", 16, "Curtea veche", 61, true, 200);
+                "novel", "paper", "romanian", 16, "Curtea veche", 61, true, 200);
         Book book2 = new Book("Un colac", 2020, 301,
                 "novel", "paper", "spanish", 16, "Rao", 61, true, 200);
         Book book3 = new Book(
@@ -64,15 +64,14 @@ public class Main {
 ///////////////////////////////////////library/////////////////////////////////////////////////
 
 
-        ArrayList<Library> inLibrary = new ArrayList<>();
-        Library instock = new Library(authors,books);
+        Library availableBooks = new Library(authors,books);
 
 
 
 
 
-        instock.filterWithGenre("drama");
-        System.out.println(instock);
+
+        System.out.println(availableBooks);
         System.out.println();
 
 
@@ -80,7 +79,7 @@ public class Main {
 
 
 
-        System.out.println();
+        System.out.println(availableBooks.filterWithGenre("novel"));
 
     }
 

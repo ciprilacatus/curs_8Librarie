@@ -15,18 +15,14 @@ public class Library {
 
     }
 
-    public void filterWithGenre(String genre) {
-
-
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("please input genre");
-//        String findGenre = sc.nextLine();
-//        if(books.contains(findGenre)) {
-//            System.out.println(this.autors);
-//        } else {
-//            System.out.println("Sory ! no books with "  + " here are our genre "+ genre);
-//        }
-
+    public ArrayList<String> filterWithGenre(String genre) {
+        ArrayList<String> bookTitlesWithGenre = new ArrayList<>();
+        for (Book book : books) {
+            if (Objects.equals(book.getGenre().toLowerCase(), genre.toLowerCase())) {
+                bookTitlesWithGenre.add(book.getTitle());
+            }
+        }
+        return bookTitlesWithGenre;
     }
 
     public void getBooksUnder(double price) {
