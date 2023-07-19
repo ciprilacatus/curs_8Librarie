@@ -3,22 +3,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Author  {
+    private String name;
     private Biography biography;
     // modificator de acces +
     private String literaryCurrent;
 
     //   TODO Arraylist<Book> writtenBooks;
-    private Book writtenBooks;
     private String language;
 
 
-    //TODO Add parameter for biography and written books.
-    public Author(Biography biography, String literaryCurrent, String language,Book writtenBooks) {
+    public Author(String name,Biography biography, String literaryCurrent, String language) {
+        this.name = name;
         this.biography = biography;
         this.literaryCurrent = literaryCurrent;
         this.language = language;
-        this.writtenBooks = writtenBooks;
-
     }
 
     public String getLiteraryCurrent() {
@@ -27,10 +25,6 @@ public class Author  {
 
     public void setLanguage(String language) {
         this.language = language;
-        biography.getName();
-    }
-    public void writtenBooksByAuthor(Book writtenBooks) {
-
     }
 
     public Biography getBiography() {
@@ -45,12 +39,13 @@ public class Author  {
         this.literaryCurrent = literaryCurrent;
     }
 
-    public Book getWrittenBooks() {
-        return writtenBooks;
+
+    public String getName() {
+        return name;
     }
 
-    public void setWrittenBooks(Book writtenBooks) {
-        this.writtenBooks = writtenBooks;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLanguage() {
@@ -60,10 +55,10 @@ public class Author  {
     @Override
     public String toString() {
         return "Author{" +
-                "literaryCurrent='" + literaryCurrent + '\'' +
+                "name='" + name + '\'' +
+                ", biography=" + biography +
+                ", literaryCurrent='" + literaryCurrent + '\'' +
                 ", language='" + language + '\'' +
                 '}';
     }
-
-
 }

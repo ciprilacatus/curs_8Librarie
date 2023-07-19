@@ -2,17 +2,25 @@ import java.util.*;
 
 
 public class Library {
-    private ArrayList<Author> autors;
+    private ArrayList<Author> author;
     private ArrayList<Book> books;
 
 
     public Library(ArrayList<Author> autors, ArrayList<Book> books) {
 
 
-        this.autors = autors;
+        this.author = autors;
         this.books = books;
 
 
+    }
+
+    public ArrayList<Double> renderBooksPrice() {
+        ArrayList<Double> renderPrice = new ArrayList<>();
+        for (Book book : books) {
+            renderPrice.add(book.getPrice());
+        }
+        return renderPrice;
     }
 
     public ArrayList<String> filterWithGenre(String genre) {
@@ -25,34 +33,62 @@ public class Library {
         return bookTitlesWithGenre;
     }
 
-    public void getBooksUnder(double price) {
+    // TODO: 7/16/2023 all methods similar with filterWithGenre 
+    public ArrayList<String> getBooksUnder(double price) {
+        ArrayList<String> bookTitlesUnderPrice = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getPrice() < price) {
+                bookTitlesUnderPrice.add(book.getTitle());
+            }
+        }
+        return bookTitlesUnderPrice;
 
     }
 
-    public void getBooksByAuthor(String authorName) {
+    public ArrayList<String> getBooksByAuthor(String authorName) {
+        ArrayList<String> bookAuthorName = new ArrayList<>();
+        for (Book book : books) {
+            if (Objects.equals(book.getAuthor().getName().toLowerCase(), authorName.toLowerCase())) {
+                bookAuthorName.add(book.getTitle());
+            }
+        }
+        return bookAuthorName;
+    }
 
+    public ArrayList<String> getBooksByName() {
+        ArrayList<String> bookByTitle = new ArrayList<>();
+        for (Book book : books) {
+            bookByTitle.add(book.getTitle());
+        }
+        return bookByTitle;
 
     }
 
-    public void getBooksByName(String bookName) {
-
+    public ArrayList<String> getBooksByLanguage(String language) {
+        ArrayList<String> languageOfBook = new ArrayList<>();
+        for(Book book : books) {
+            if (Objects.equals(book.getLanguage().toLowerCase(),language.toLowerCase())) {
+                languageOfBook.add(book.getTitle());
+            }
+        }return languageOfBook;
     }
 
-    public void getBooksByLanguage(String language) {
-
-    }
-
-    public void getAuthorsByLiteraryCurrent(String current) {
-
+    public ArrayList<String> getAuthorsByLiteraryCurrent(String current) {
+        ArrayList<String> authorLiteraryCurrent = new ArrayList<>();
+        for(Author authors : author) {
+            if (Objects.equals(authors.getLiteraryCurrent().toLowerCase(),current.toLowerCase())) {
+                authorLiteraryCurrent.add(authors.getName());
+            }
+        }return authorLiteraryCurrent;
     }
 
 
     public ArrayList<Author> getAutors() {
-        return autors;
+        return author;
     }
 
     public void setAutors(ArrayList<Author> autors) {
-        this.autors = autors;
+        this.author = autors;
     }
 
     public ArrayList<Book> getBooks() {
@@ -63,10 +99,11 @@ public class Library {
         this.books = books;
     }
 
+
     @Override
     public String toString() {
         return "Library{" +
-                "autors=" + autors +
+                "autors=" + author +
                 ", books=" + books +
                 '}';
     }

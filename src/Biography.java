@@ -17,15 +17,6 @@ public class Biography {
 
     }
 
-//    public Biography(String name, String birthDate, boolean isAlive) {
-//        this.name = name;
-//        this.birthDate = birthDate;
-//        this.isALive = isAlive;
-//        this.placeOfBirth = "Unknown";
-//        this.education = null;
-//    }
-
-
     // SET parameters////////////////////////////////////////////
     public void setName(String name) {
         this.name = name;

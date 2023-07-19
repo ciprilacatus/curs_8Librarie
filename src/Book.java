@@ -4,7 +4,9 @@ import java.util.Locale;
 
 public class Book {
 
+
     private String title;
+    private Author author;
     private int yearPublished;
     private int numberOfPages;
     private String genre;
@@ -17,11 +19,13 @@ public class Book {
     private int quantity;
 
 
-    public Book(String title, int yearPublished, int numberOfPages,
+    public Book(String title, Author author, int yearPublished, int numberOfPages,
                 String genre, String format,
                 String language, int ageRecommandation, String editorialAgency,
                 double price, boolean isInStock, int quantity) {
+
         this.title = title;
+        this.author = author;
         this.yearPublished = yearPublished;
         this.numberOfPages = numberOfPages;
         this.genre = genre;
@@ -32,8 +36,6 @@ public class Book {
         this.price = price;
         this.isInStock = isInStock;
         this.quantity = quantity;
-
-
     }
 
 
@@ -146,11 +148,24 @@ public class Book {
         this.quantity = quantity;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     @Override
     public String toString() {
         return "Book{" +
-                "title='" + title + '\'' +
+
+                ",title='" + title + '\'' +
+                ",author=" + author +
                 ", yearPublished=" + yearPublished +
                 ", numberOfPages=" + numberOfPages +
                 ", genre=" + genre +
